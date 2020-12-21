@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello, world!</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  </head>
+
+
+
+  <body> 
+    <form action="" method="poat">
+      <!-- Label A dan B -->
+      <label for="labelA">Label A</label>
+      <input type="text" name="labelA" id="labelA" class="valueLabel" autofocus>
+      
+      <label for="labelB">Label B</label>
+      <input type="text" name="labelB" id="labelB" class="valueLabel">
+    </form>
+
+    <script>
+          $(document).ready(function() {
+            // Ketika di enter
+            document.querySelector('.valueLabel').addEventListener('keyup', function(e){
+              if (e.keyCode === 13) {
+                var labelA = $("#labelA").val();
+                var labelB = $("#labelB").val();
+                console.log("Isi label A = "+labelA);
+                console.log("Isi label B = " +labelB);
+              }
+            });
+          });
+    </script>
+  </body>
+</html>
